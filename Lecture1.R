@@ -130,9 +130,15 @@ my_list[["a1"]]
 my_list[["a1"]][["b2"]][["c1"]]
 my_list[[c("a1", "b2", "c1")]]
 my_list[[c(1,2,1)]]
+
 my_list[[c("a1", "b2")]]
+#equivalent to 
 my_list[["a1"]][["b2"]]
+#equivalent to 
+
 my_list[[c(1,2)]]
+
+
 my_list[[1]][[1:2]]
 
 # Problem 1: explain the differences between the following:
@@ -144,7 +150,7 @@ my_list[c("a1", "b2", "c1")]
 my_list[c(1,2)]
 
 # Problem 3: making use of the train analogy, explain why the following differ:
-my_list[]
+my_list[] # whole train 
 my_list[[]]
 
 

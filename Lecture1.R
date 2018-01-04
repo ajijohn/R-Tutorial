@@ -84,6 +84,7 @@ a[,"3",]
 a[,3,]
 # everything but second column - 2 dimsensiojn
 a[,-2,]
+#TODO - try this
 a[c(TRUE,FALSE),,c("dog","pig")]
 a[c(TRUE,FALSE),,c(2,4)]
 a[c(TRUE,FALSE),,-c("dog","pig")] # FAIL
@@ -91,12 +92,15 @@ a[c(TRUE,FALSE),,-c(2,4)]
 
 
 # Remember: arrays are atomic vectors with special attributes,
+# TODO - What do you mean by Atmoc ?
 # but vectors anyway
 a[10]
 a[c(10,21)]
 a[-c(1:5)]
+# logical vector 
 a[a>10]
 
+# levels 
 # How can we extract a subset of specific entries?
 entries <- matrix(ncol = 3, byrow = TRUE, c(
   2, 1, 3,  

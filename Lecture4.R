@@ -42,3 +42,20 @@ str(surveys_gw)
 
 #introduce reshaping
 
+#wide table
+surveys_spread <- surveys_gw %>%
+  spread(key = genus, value = mean_weight)
+
+
+#wide to long
+surveys_gather <- surveys_spread %>%
+  gather(key = genus, value = mean_weight, -plot_id)
+
+
+#specific selectopn
+
+surveys_spread %>%
+  gather(key = genus, value = mean_weight, -c('plot_id','Baiomys','Spermophilus')) %>%
+  head
+
+

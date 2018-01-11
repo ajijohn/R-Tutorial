@@ -136,4 +136,9 @@ ggplot(data = yearly_sex_weight, aes(x = year, y = avg_weight, color = species_i
     xlab("Average\nWeight")
 
   #interactive plots
-  ggsave("my_viz.png")
+  #ggsave("my_viz.png")
+  surveysn %>%
+    slice(1:100) %>%
+    ggplot(aes(weight,hindfoot_length))+
+    geom_point() +
+    geom_text_repel(aes(label=species_id))
